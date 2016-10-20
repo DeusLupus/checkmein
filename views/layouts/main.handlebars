@@ -1,0 +1,68 @@
+<!--
+Here is the main HTML where handlebars will render to
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+		    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+		<title>Check Me In!</title>
+	</head>
+	<body>
+	<!--  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Check Me In!</a>
+      
+  </nav> -->
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Check Me In!</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Check In</a></li>
+        <li><a href="badges.html">History</a></li>
+        <li><a href="collapsible.html">Help</a></li>
+        <li><a href="mobile.html">Sign Up</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Check Into Class</a></li>
+        <li><a href="badges.html">See History</a></li>
+        <li><a href="collapsible.html">Need Help?</a></li>
+        <li><a href="mobile.html">Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+         
+          
+		<p>
+		
+			{{#if logged_in}}
+				Welcome {{email}}! <br>
+				You are user {{user_id}}.<br>
+				<a href="/users/sign-out">Sign Out</a>
+			{{/if}}
+		</p>
+		{{{ body }}}
+
+
+
+		<p>	{{#unless logged_in}}
+				<a href="/users/sign-in">Sign In</a>
+				<a href="/users/new">Sign Up</a>
+			{{/unless}}
+</p>
+
+
+	</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script type="text/javascript"> $(".button-collapse").sideNav();</script>
+</HTML>
