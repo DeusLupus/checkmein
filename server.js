@@ -1,18 +1,3 @@
-/* 6- Sequelize with Cats
- *  (((SOLUTION)))
- * -/-/-/-/-/-/-/-/-/-/-/ */
-
-
-/* STUDENTS
- * Create a database called cat_with_sequelize_db
- *
- * Your instructions lie in users_controller.js
- * and cats_controller.js
- * Good luck!
- * -/-/-/-/-/ */
-
-
-
 // Dependencies
 // ============
 var express = require('express');
