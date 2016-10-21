@@ -23,9 +23,5 @@
   },
   "devDependencies": {
     "mysql": "^2.11.1"
-  },
-   "production": {
-    "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
   }
 }
