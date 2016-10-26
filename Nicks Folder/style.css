@@ -1,0 +1,287 @@
+/* Add padding around elements inside the form */
+#elements_inside_form {
+    padding: 16px;
+}
+
+/* Form style && centering code */
+form {
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%); 
+}
+
+label, b{
+    color: white;
+}
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Log-in button */
+#login_btn {
+    background-color: #fc0;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+/*#login_btn:hover {
+    background-color: #455a64;
+}*/
+
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+
+    padding-top: 16px;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/*=========================================================================*/
+.col{
+
+    margin-top: 20px;
+
+/*    border:2px;
+    border:solid;
+    color: black;
+    background-color: yellow;*/
+}
+
+.card {
+    background-color: black;
+    /*background-color: #fc0;*/
+}
+
+h5 {
+/*color: #fc0;*/
+color: white;
+
+}
+i.right {
+    color: #fc0;
+}
+
+.card-content{
+/*color: #fc0;*/
+}
+/*=========================================================================*/
+
+/*#face {
+    font-size: 6rem;
+    margin: 15px;
+}*/
+
+
+.resources_li_margin{
+    margin: 5px;
+}
+
+
+
+/*assignment icon color*/
+/*.collapsible-header i{
+    color: #fc0;
+}*/
+
+.collection.with-header .collection-header{
+    background-color: #fc0;
+    color: black;
+}
+
+/*change body color when mobile*/
+@media only screen and (max-width: 500px) {
+    body {
+        background-color:black;
+    }
+    input[type=text], input[type=password]{
+    border-color: #fc0;
+    }
+}
+
+
+/*input[type=text], input[type=password]{
+    border-color: #fc0;
+}*/
+
+
+.btn, .btn-large {
+    background-color: #fc0;
+    color: black;
+}
+i.right {
+    color: black;
+}
+#slide-out{
+    background-color: red;
+}
+
+
+
+/*footer stay at bottom*/
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+/*footer background*/
+footer.page-footer{
+    background: #fc0;
+}
+
+footer.page-footer{
+    margin-top: 5px;
+    padding:20px;
+
+}
+
+
+body{
+    font-size:small;
+}
+
+
+
+
+
+
+.shit{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+/*=========================================================================*/
+nav {
+    height: 80px;
+    line-height: 80px;
+    background-color: #000;
+    color: #fc0;
+    margin-bottom: 10px;
+}
+
+.brand-logo.center,.button-collapse i {
+    color: #fc0;
+}
+
+/*change page color*/
+html {
+    font-family: 'Orbitron',sans-serif;
+/*background-color:#fc0;*/
+    background-color: #fff;
+}
+
+#slide-out {
+/*nav bar color*/
+    background-color: #000;
+}
+
+.side-nav li>a>i.material-icons {
+    color: #fc0;
+}
+
+.side-nav li>a {
+    color: #fff;
+}
+
+.clearfix {
+    display: block;
+/*keeps slide out menu links staight*/
+}
+
+.clearfix:hover {
+    background-color: #455a64;
+}
+
+
+
+
+
+
+
+#header-fixed {
+    margin-top: 50px;
+}
+
+
+
+@media only screen and (min-width: 601px) {
+    nav,nav .nav-wrapper i,nav a.button-collapse,nav a.button-collapse i {
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+/*this will create bounce effect===================*/
+@keyframes bounce {
+    0%,20%,60%,100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+/*li:hover {
+    animation: bounce 1s;
+}*/
+
+
+#e:hover {
+    animation: bounce 1s;
+}
+#f:hover {
+    animation: bounce 1s;
+}
+#g:hover {
+    animation: bounce 1s;
+}
