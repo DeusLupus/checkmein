@@ -1,4 +1,5 @@
-/* Add padding around elements inside the form */
+/*=========================================================================log in form*/
+/*padding around elements inside the form */
 #elements_inside_form {
     padding: 16px;
 }
@@ -7,17 +8,20 @@
 form {
     background-color: black;
     color: white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%); 
+    text-align: left;
+    /*position: fixed;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*!* bring your own prefixes *!*/
+    /*transform: translate(-50%, -50%); */
 }
 
-label, b{
+/*label text color*/
+label, b {
     color: white;
 }
-/* Full-width inputs */
+
+/*input box style */
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -25,8 +29,10 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    /*background-color: grey;*/
 }
-/* Log-in button */
+
+/*log-in button style */
 #login_btn {
     background-color: #fc0;
     color: black;
@@ -36,46 +42,35 @@ input[type=text], input[type=password] {
     cursor: pointer;
     width: 100%;
 }
-/*#login_btn:hover {
-    background-color: #455a64;
-}*/
-
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-
-    padding-top: 16px;
+/*login button hover effect*/
+#login_btn:hover {
+    opacity:.5;
 }
 
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    .cancelbtn {
-        width: 100%;
+/*expand log in form when mobile */
+@media only screen and (min-width: 500px) {
+    form {
+        width:40%;
+        margin-left: 30%;
     }
 }
+/*=========================================================================log in form*/
 
-/*=========================================================================*/
+/*please tweak this as this takes up alot of room*/
+/*=========================================================================column margin*/
 .col{
 
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 
 /*    border:2px;
     border:solid;
     color: black;
     background-color: yellow;*/
 }
+/*=========================================================================column margin*/
 
+
+/*=========================================================================cards*/
 .card {
     background-color: black;
     /*background-color: #fc0;*/
@@ -93,12 +88,7 @@ i.right {
 .card-content{
 /*color: #fc0;*/
 }
-/*=========================================================================*/
 
-/*#face {
-    font-size: 6rem;
-    margin: 15px;
-}*/
 
 
 .resources_li_margin{
@@ -117,17 +107,9 @@ i.right {
     color: black;
 }
 
-/*change body color when mobile*/
-@media only screen and (max-width: 500px) {
-    body {
-        background-color:black;
-    }
-    input[type=text], input[type=password]{
-    border-color: #fc0;
-    }
-}
 
 
+/*=========================================================================cards*/
 /*input[type=text], input[type=password]{
     border-color: #fc0;
 }*/
@@ -146,34 +128,101 @@ i.right {
 
 
 
-/*footer stay at bottom*/
-  body {
+
+
+
+
+
+
+
+
+/*=========================================================================footer*/
+/*helps keep footer at bottom of page*/
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+/*helps keep footer at bottom of page*/
+main {
     flex: 1 0 auto;
-  }
-/*footer background*/
+}
+
+/*footer background-color*/
 footer.page-footer{
     background: #fc0;
 }
 
-footer.page-footer{
-    margin-top: 5px;
-    padding:20px;
-
+/*footer icons font size*/
+#e,#f,#g{
+    font-size:35px;
 }
 
+/*animate footer icons on hover*/
+#e:hover {
+    animation: bounce 1s;
+}
+
+/*animate footer icons on hover*/
+#f:hover {
+    animation: bounce 1s;
+}
+
+/*animate footer icons on hover*/
+#g:hover {
+    animation: bounce 1s;
+}
+
+/*footer media icons*/
+#twitter, #facebook, #insta {
+    margin-top: 0px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+/*footer media icons column margin adjust*/
+#mediaIcons{
+    margin-top: 0px;
+}
+
+/*footer column margin adjust*/
+#schoolcol, #techcol,#contactcol {
+    margin-bottom: 0px;
+    font-size:10px;
+}
+/*footer column margin adjust*/
+#nick{
+    margin-bottom: 0px;
+}
+/*=========================================================================footer*/
+
+#welcome{
+    margin-top: 2px;
+}
+
+
+
+
+
+/*=========================================================================body test size and color (diff color available for mobile)*/
 
 body{
     font-size:small;
 }
 
+/*change body color when mobile*/
+/*@media only screen and (max-width: 500px) {*/
+    /*body {*/
+        /*background-color:black;*/
+    /*}*/
+    /*input[type=text], input[type=password]{*/
+        /*border-color: #fc0;*/
+    /*}*/
+/*}*/
 
-
+/*=========================================================================body test size and color (diff color available for mobile)*/
 
 
 
@@ -191,8 +240,6 @@ body{
 
 
 
-
-/*=========================================================================*/
 nav {
     height: 80px;
     line-height: 80px;
@@ -215,14 +262,6 @@ html {
 #slide-out {
 /*nav bar color*/
     background-color: #000;
-}
-
-.side-nav li>a>i.material-icons {
-    color: #fc0;
-}
-
-.side-nav li>a {
-    color: #fff;
 }
 
 .clearfix {
@@ -276,12 +315,46 @@ html {
 }*/
 
 
-#e:hover {
-    animation: bounce 1s;
+
+
+
+
+
+
+/*testing new header*/
+header{
+    /*background-color: #fc0;*/
 }
-#f:hover {
-    animation: bounce 1s;
+
+/*checkin logo color-need to choose a color and adjustbthe header color to suit*/
+#checkin{
+    /*color: #fc0;*/
 }
-#g:hover {
-    animation: bounce 1s;
+
+/*side nav background color*/
+.side-nav{
+    background-color: black;
 }
+
+.side-nav li>a:hover{
+    opacity:.2;
+}
+
+/*side nav icon color*/
+.side-nav li>a>i.material-icons {
+    color: #fc0;
+}
+
+/*side nav text color*/
+.side-nav li>a {
+    color: #fff;
+}
+
+
+.carousel {
+    height:200px;
+    margin-top: 20px;
+}
+
+
+

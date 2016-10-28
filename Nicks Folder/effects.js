@@ -21,3 +21,11 @@ $( document ).ready(function() {
 $(document).ready(function(){
     $('.carousel').carousel();
 });
+
+
+$(document).ready(function(){
+    $('.carousel').carousel({dist:0});
+    window.setInterval(function(){$('.carousel').carousel('next')},900)
+});
+
+
