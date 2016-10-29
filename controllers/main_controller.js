@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
     // grab the user info from our req.
     // How is it in our req?
     // This info gets saved to req via the users_controller.js file.
-    res.render('cats/index', {
+    res.render('main/index', {
       user_id: req.session.user_id,
       email: req.session.user_email,
       logged_in: req.session.logged_in,

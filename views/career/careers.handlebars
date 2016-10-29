@@ -1,0 +1,97 @@
+{{#if logged_in}}  
+
+
+<table id="header-fixed" class="container-fluid highlight bordered centered">
+
+              <thead>
+                <tr>
+                  <th data-field="id">Job Title</th>
+                  <th data-field="name">Company</th>
+                  <th data-field="price">Link</th>
+                  <th data-field="price">Date Posted</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+               
+
+              </tbody>
+
+            </table>
+
+
+
+
+<script type="text/javascript">
+	
+
+
+    var queryURL = "http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=Web+Developer&city=32816&pgcnt=5";
+    
+    
+    $.ajax({url: queryURL, method: 'GET'})
+
+     
+     .done(function(response) {
+        
+        // console.log(queryURL);
+        
+        // console.log(response);
+         
+
+
+         for (i = 0; i<5; i++){
+     console.log(response.resultItemList[i].company);
+        
+        $('table').append("<tr><td id='name'> "+response.resultItemList[i].jobTitle+" </td><td id='dest'> "+response.resultItemList[i].company+" </td><td id='freq'> "
+ 			+response.resultItemList[i].detailUrl+" </td><td id='firstTrain'> "+response.resultItemList[i].date+" </td></tr>");
+
+
+}
+        
+        
+    }); 
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{/if}}

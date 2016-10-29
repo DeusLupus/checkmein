@@ -13,10 +13,17 @@ var methodOverride = require('method-override'); // for deletes in express
 // Our model controllers (rather than routes)
 var application_controller = require('./controllers/application_controller');
 
-var cats_controller = require('./controllers/cats_controller');
+var main_controller = require('./controllers/main_controller');
 
 var users_controller = require('./controllers/users_controller');
 
+var attendance_controller = require('./controllers/attendance_controller');
+
+var landing_controller = require('./controllers/landing_controller');
+
+var career_controller = require('./controllers/career_controller');
+
+var homework_controller = require('./controllers/homework_controller');
 
 
 
@@ -30,8 +37,9 @@ var app = express();
 app.use(methodOverride('_method'));
 
 //allow sessions
-app.use(session({ secret: 'app', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
+app.use(session({ secret: 'app', cookie: { maxAge: 120000 }, resave: true, saveUninitialized: true}));
 app.use(cookieParser());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -52,8 +60,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', application_controller);
-app.use('/cats', cats_controller);
+app.use('/main', main_controller);
 app.use('/users', users_controller);
+app.use('/attendance', attendance_controller);
+app.use('/landing', landing_controller);
+app.use('/career', career_controller);
+app.use('/homework', homework_controller);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

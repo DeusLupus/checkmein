@@ -1,6 +1,7 @@
 var bcrypt = require('bcryptjs');
 var models  = require('../models');
 var express = require('express');
+
 var router  = express.Router();
 
 //this is the users_controller.js file
@@ -18,6 +19,13 @@ router.get('/sign-out', function(req,res) {
   })
 });
 
+//   router.get('/attendance', function(req, res) {
+//   res.render('users/attendance');
+
+//   console.log(req.session.logged_in);
+// });
+
+ 
 
 // login
 router.post('/login', function(req, res) {
@@ -53,7 +61,13 @@ router.post('/login', function(req, res) {
         // and the user's email.
         req.session.user_email = user.email;
 
-        res.redirect('/');
+         res.redirect('/landing');
+
+        
+
+       
+
+
       }
       // if the result is anything but true (password invalid)
       else{
