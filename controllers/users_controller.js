@@ -37,13 +37,9 @@ router.post('/login', function(req, res) {
 			res.redirect('/users/sign-in')
 		}
 
-		// Solution:
-		// =========
-		// Use bcrypt to compare the user's password input
-		// with the hash stored in the user's row. 
-		// If the result is true, 
+		 
     bcrypt.compare(req.body.password, user.password_hash, function(err, result) {
-      // if the result is true (and thus pass and hash match)
+      
       if (result == true){
 
       	// save the user's information 
@@ -69,7 +65,7 @@ router.post('/login', function(req, res) {
 
 
       }
-      // if the result is anything but true (password invalid)
+    
       else{
       	// redirect user to sign in
 				res.redirect('/users/sign-in')
@@ -90,11 +86,7 @@ router.post('/create', function(req,res) {
 			res.send('we already have an email or username for this account')
 		} else {
 
-			// Solution:
-			// =========
-
-			// Using bcrypt, generate a 10-round salt,
-			// then use that salt to hash the user's password.
+		
 			bcrypt.genSalt(10, function(err, salt) {
 				bcrypt.hash(req.body.password, salt, function(err, hash) {
 					

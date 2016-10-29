@@ -30,7 +30,6 @@ var homework_controller = require('./controllers/homework_controller');
 // Express settings
 // ================
 
-// instantiate our app
 var app = express();
 
 // override POST to have DELETE and PUT
@@ -51,8 +50,7 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -74,8 +72,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handler
-// no stacktraces leaked to user unless in development environment
+
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
@@ -87,4 +84,3 @@ app.use(function(err, req, res, next) {
 // our module get's exported as app.
 module.exports = app;
 
-// Where's the listen? Open up bin/www, and read the comments.
